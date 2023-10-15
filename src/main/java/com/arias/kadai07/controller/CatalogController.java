@@ -32,5 +32,11 @@ public class CatalogController {
         catalogService.update(catalogList);
         return "データベースを更新しました。";
     }
+
+    @DeleteMapping("/delete")
+    public String delete(@RequestBody int id) {
+        catalogService.delete(id);
+        return "データベースから削除しました。";
+    }
 }
 

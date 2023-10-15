@@ -22,4 +22,8 @@ public class CatalogService {
     public void insert(List<Catalog_List> catalogList) {
         catalogMapper.insert(catalogList);
     }
+
+    public void update(List<Catalog_List> catalogList) {
+        catalogMapper.update(catalogList);
+    }
 }

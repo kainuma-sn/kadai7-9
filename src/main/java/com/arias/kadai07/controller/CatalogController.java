@@ -3,10 +3,7 @@ package com.arias.kadai07.controller;
 import com.arias.kadai07.entity.Catalog_List;
 import com.arias.kadai07.service.CatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,4 +26,11 @@ public class CatalogController {
         catalogService.insert(catalogList);
         return "データベースに登録しました。";
     }
+
+    @PatchMapping("/update")
+    public String update(@RequestBody List<Catalog_List> catalogList) {
+        catalogService.update(catalogList);
+        return "データベースを更新しました。";
+    }
 }
+

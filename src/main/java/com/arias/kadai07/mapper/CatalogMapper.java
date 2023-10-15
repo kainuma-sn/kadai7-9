@@ -1,10 +1,7 @@
 package com.arias.kadai07.mapper;
 
 import com.arias.kadai07.entity.Catalog_List;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -23,4 +20,18 @@ public interface CatalogMapper {
             "</script>"
     })
     int insert(@Param("list") List<Catalog_List> catalogList);
+
+    @Update({
+            "<script>",
+            "UPDATE catalog_list SET",
+            "<foreach collection='list' item='item' separator=','>",
+            "productName = #{item.productName}, productPrice = #{item.productPrice}, productStock = #{item.productStock}",
+            "</foreach>",
+            "WHERE id IN",
+            "<foreach collection='list' item='item' separator=',' open='(' close=')'>",
+            "#{item.id}",
+            "</foreach>",
+            "</script>"
+    })
+    int update(@Param("list") List<Catalog_List> cataloglist);
 }

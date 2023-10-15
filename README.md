@@ -1,4 +1,4 @@
-# kadai7
+# kadai7-9
 
 ### Dockerファイルとmysqlファイルの設定
 > [DockerファイルとMySQLファイルの実装](https://github.com/kainuma-sn/kadai7/pull/1#issuecomment-1763373325)

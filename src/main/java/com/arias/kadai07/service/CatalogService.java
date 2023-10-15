@@ -26,4 +26,10 @@ public class CatalogService {
     public void update(List<Catalog_List> catalogList) {
         catalogMapper.update(catalogList);
     }
+
+    public void delete(int id) {
+        catalogMapper.delete(id);
+
+        catalogMapper.reorderCatalogList();
+    }
 }

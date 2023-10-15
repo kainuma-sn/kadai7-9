@@ -34,4 +34,11 @@ public interface CatalogMapper {
             "</script>"
     })
     int update(@Param("list") List<Catalog_List> cataloglist);
+
+    @Delete("DELETE FROM catalog_list WHERE id = #{id}")
+    int delete(int id);
+
+    @Update("SELECT * FROM catalog_list\n" +
+            "ORDER BY id ASC;")
+    void reorderCatalogList();
 }

@@ -41,4 +41,7 @@ public interface CatalogMapper {
     @Update("SELECT * FROM catalog_list\n" +
             "ORDER BY id ASC;")
     void reorderCatalogList();
+
+    @Select("SELECT * FROM catalog_list WHERE id = #{id}")
+    Catalog_List findProduct(int id);
 }

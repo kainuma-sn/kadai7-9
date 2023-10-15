@@ -32,4 +32,8 @@ public class CatalogService {
 
         catalogMapper.reorderCatalogList();
     }
+
+    public Catalog_List findProduct(int id) {
+        return catalogMapper.findProduct(id);
+    }
 }

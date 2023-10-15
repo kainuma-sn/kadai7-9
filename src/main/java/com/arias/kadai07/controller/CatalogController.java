@@ -38,5 +38,11 @@ public class CatalogController {
         catalogService.delete(id);
         return "データベースから削除しました。";
     }
+
+    @GetMapping("/catalog/{id}")
+    public Catalog_List getUser(@PathVariable("id") int id) {
+        return catalogService.findProduct(id);
+    }
+
 }
 

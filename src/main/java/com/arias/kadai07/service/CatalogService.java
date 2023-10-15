@@ -18,4 +18,8 @@ public class CatalogService {
     public List<Catalog_List> findAll() {
         return catalogMapper.findAll();
     }
+
+    public void insert(List<Catalog_List> catalogList) {
+        catalogMapper.insert(catalogList);
+    }
 }

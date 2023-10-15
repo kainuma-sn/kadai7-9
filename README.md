@@ -8,6 +8,6 @@
 
 ## CRUD,GET/POST/PATCH/DELETEを実装
 ### POST,CREATE
-> https://github.com/kainuma-sn/kadai7-9/pull/6#issuecomment-1763424214
+> [HTTPからPOSTでMySQLにデータを追加できる環境を構築 ](https://github.com/kainuma-sn/kadai7-9/pull/6#issuecomment-1763424214)
 ### PATCH,UPDATE
 > [HTTPからPATCHでMySQLにデータを更新できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/7#issuecomment-1763438563)

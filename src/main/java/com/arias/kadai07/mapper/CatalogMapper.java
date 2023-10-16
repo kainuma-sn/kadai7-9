@@ -42,8 +42,8 @@ public interface CatalogMapper {
     @Delete("DELETE FROM catalog_list WHERE id = #{id}")
     int delete(int id);
 
-    //データベースから商品名を検索する
-    @Select("SELECT * FROM catalog_list WHERE productName LIKE CONCAT('%', #{productName}, '%')")
-    List<Catalog_List> search(String productName);
+//    //データベースから商品名を検索する
+//    @Select("SELECT * FROM catalog_list WHERE productName LIKE CONCAT('%', #{productName}, '%')")
+//    List<Catalog_List> search(String productName);
 
 }

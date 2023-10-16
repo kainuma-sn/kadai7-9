@@ -17,6 +17,6 @@ public interface NameService {
     //データベースからデータを削除する
     public void delete(int id);
 
-//    //データベースから商品名を検索する
-//    public List<Catalog_List> search(String productName);
+    //データベースから商品名を検索する
+    public List<Catalog_List> search(String productName);
 }

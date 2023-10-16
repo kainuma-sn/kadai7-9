@@ -81,18 +81,18 @@ public class CatalogServiceImpl implements NameService {
         }
     }
 
-//    //データベースから商品名を検索する
-//    public List<Catalog_List> search(String productName) {
-//        try {
-//            // データベースからデータを取得
-//            List<Catalog_List> result = catalogMapper.search(productName);
-//            return result;
-//        } catch (DataAccessException ex) {
-//            // データベースアクセスに関連する例外をキャッチする
-//            logger.error("データベースからデータの取得中にエラーが発生しました", ex);
-//
-//            // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
-//            throw new MyCustomDataAccessException("データベースからデータの取得中にエラーが発生しました。詳細情報を提供しました。", ex);
-//        }
-//    }
+    //データベースから商品名を検索する
+    public List<Catalog_List> search(String productName) {
+        try {
+            // データベースからデータを取得
+            List<Catalog_List> result = catalogMapper.search(productName);
+            return result;
+        } catch (DataAccessException ex) {
+            // データベースアクセスに関連する例外をキャッチする
+            logger.error("データベースからデータの取得中にエラーが発生しました", ex);
+
+            // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
+            throw new MyCustomDataAccessException("データベースからデータの取得中にエラーが発生しました。詳細情報を提供しました。", ex);
+        }
+    }
 }

@@ -29,14 +29,12 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを取得
             List<Catalog_List> result = catalogMapper.findAll();
-
             //取得したデータを返す
             return result;
 
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの取得中にエラーが発生しました", ex);
-
             // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
             throw new MyCustomDataAccessException("データベースからデータの取得中にエラーが発生しました。詳細情報を提供しました。", ex);
         }
@@ -47,14 +45,12 @@ public class CatalogServiceImpl implements NameService {
         try {
             // バリデーションを実行
             catalogValidation.checkNullorEmptyCatalog(catalogList);
-
             //データベースにデータを登録
             catalogMapper.insert(catalogList);
 
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースにデータの登録中にエラーが発生しました", ex);
-
             // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
             throw new MyCustomDataAccessException("データベースにデータの登録中にエラーが発生しました。詳細情報を提供しました。", ex);
         }
@@ -71,7 +67,6 @@ public class CatalogServiceImpl implements NameService {
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースのデータの更新中にエラーが発生しました", ex);
-
             // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
             throw new MyCustomDataAccessException("データベースのデータの更新中にエラーが発生しました。詳細情報を提供しました。", ex);
         }
@@ -82,11 +77,9 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを削除
             catalogMapper.delete(id);
-
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの削除中にエラーが発生しました", ex);
-
             // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
             throw new MyCustomDataAccessException("データベースからデータの削除中にエラーが発生しました。詳細情報を提供しました。", ex);
         }
@@ -97,14 +90,11 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを取得
             List<Catalog_List> result = catalogMapper.search(productName);
-
             //取得したデータを返す
             return result;
-            
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの取得中にエラーが発生しました", ex);
-
             // 例外をカスタムのエラーメッセージとともに再スローするか、エラーメッセージをユーザーに提供する
             throw new MyCustomDataAccessException("データベースからデータの取得中にエラーが発生しました。詳細情報を提供しました。", ex);
         }

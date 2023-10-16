@@ -8,9 +8,11 @@ import java.util.List;
 @Mapper
 public interface CatalogMapper {
 
+    //データベースから全てのデータを取得する
     @Select("SELECT * FROM catalog_list")
     List<Catalog_List> findAll();
 
+    //データベースにデータを登録する
     @Insert({
             "<script>",
             "INSERT INTO catalog_list (productName, productPrice, productStock) VALUES ",
@@ -21,6 +23,7 @@ public interface CatalogMapper {
     })
     int insert(@Param("list") List<Catalog_List> catalogList);
 
+    //データベースのデータを更新する
     @Update({
             "<script>",
             "UPDATE catalog_list SET",
@@ -35,10 +38,8 @@ public interface CatalogMapper {
     })
     int update(@Param("list") List<Catalog_List> cataloglist);
 
+    //データベースからデータを削除する
     @Delete("DELETE FROM catalog_list WHERE id = #{id}")
     int delete(int id);
 
-    @Update("SELECT * FROM catalog_list\n" +
-            "ORDER BY id ASC;")
-    void reorderCatalogList();
 }

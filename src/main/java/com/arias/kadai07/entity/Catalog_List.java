@@ -1,6 +1,7 @@
 package com.arias.kadai07.entity;
 
 public class Catalog_List {
+    //フィールド
     private int id;
     private String productName;
     private int productPrice;
@@ -9,6 +10,7 @@ public class Catalog_List {
     public Catalog_List() {
     }
 
+    //コンストラクタ
     public Catalog_List(int id, String productName, int productPrice, int productStock) {
         this.id = id;
         this.productName = productName;
@@ -16,6 +18,7 @@ public class Catalog_List {
         this.productStock = productStock;
     }
 
+    //getter, setter
     public int getId() {
         return id;
     }

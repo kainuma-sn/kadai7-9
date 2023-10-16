@@ -9,6 +9,8 @@
 #### MyBatisでRead等の実装
 #### 例外をハンドリングする処理を実装
 
+<br><br>
+
 ## 実装<br>
 ### Dockerファイルとmysqlファイルの設定<br>
 > [DockerファイルとMySQLファイルの実装](https://github.com/kainuma-sn/kadai7/pull/1#issuecomment-1763373325)<br>

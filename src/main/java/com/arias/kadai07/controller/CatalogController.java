@@ -43,5 +43,12 @@ public class CatalogController {
         catalogServiceImpl.delete(id);
         return "データベースから削除しました。";
     }
+
+    //データベースから商品名を検索する
+    @GetMapping("/search")
+    public List<Catalog_List> search(@RequestParam String productName) {
+        return catalogServiceImpl.search(productName);
+    }
+
 }
 

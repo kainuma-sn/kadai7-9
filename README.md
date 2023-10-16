@@ -19,3 +19,5 @@
 > [HTTPからGETでMySQLのデータを検索できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/15#issuecomment-1765314542)
 ### 各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装
 > [各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装](https://github.com/kainuma-sn/kadai7-9/pull/14#issue-1946083340)
+### null又は空白を検出するバリデーションを実装
+> [](https://github.com/kainuma-sn/kadai7-9/pull/17#issuecomment-1765359503)

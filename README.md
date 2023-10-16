@@ -16,4 +16,4 @@
 ### ~~GET ※指定したIDを取得~~
 > ~~[HTTPからGETでMySQLの指定したレコードを取得できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/13#issuecomment-1763450212)~~
 ### 各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装
-> [各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装]
+> [各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装](https://github.com/kainuma-sn/kadai7-9/pull/14#issue-1946083340)

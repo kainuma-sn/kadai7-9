@@ -15,5 +15,7 @@
 > [HTTPからPATCHでMySQLのデータを削除できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/8#issuecomment-1763445120)
 ### ~~GET ※指定したIDを取得~~
 > ~~[HTTPからGETでMySQLの指定したレコードを取得できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/13#issuecomment-1763450212)~~
+### GET ※検索した文字を含む商品を取得
+> [HTTPからGETでMySQLのデータを検索できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/15#issuecomment-1765314542)
 ### 各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装
 > [各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装](https://github.com/kainuma-sn/kadai7-9/pull/14#issue-1946083340)

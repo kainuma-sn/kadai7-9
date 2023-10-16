@@ -5,4 +5,8 @@ public class MyCustomDataAccessException extends RuntimeException {
     public MyCustomDataAccessException(String message, Throwable cause) {
         super(message, cause);
     }
+
+    public MyCustomDataAccessException(String message) {
+        super(message);
+    }
 }

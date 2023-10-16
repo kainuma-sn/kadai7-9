@@ -3,6 +3,7 @@ package com.arias.kadai07.service;
 import com.arias.kadai07.Exception.MyCustomDataAccessException;
 import com.arias.kadai07.entity.Catalog_List;
 import com.arias.kadai07.mapper.CatalogMapper;
+import com.arias.kadai07.validation.CatalogValidation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;
@@ -16,6 +17,7 @@ public class CatalogServiceImpl implements NameService {
     //依存性注入
     private final CatalogMapper catalogMapper;
     private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final CatalogValidation catalogValidation = new CatalogValidation();
 
     //コンストラクタ
     CatalogServiceImpl(CatalogMapper catalogMapper) {
@@ -27,7 +29,10 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを取得
             List<Catalog_List> result = catalogMapper.findAll();
+
+            //取得したデータを返す
             return result;
+
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの取得中にエラーが発生しました", ex);
@@ -40,8 +45,12 @@ public class CatalogServiceImpl implements NameService {
     //データベースにデータを登録する
     public void insert(List<Catalog_List> catalogList) {
         try {
-            // データベースにデータを登録
+            // バリデーションを実行
+            catalogValidation.checkNullorEmptyCatalog(catalogList);
+
+            //データベースにデータを登録
             catalogMapper.insert(catalogList);
+
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースにデータの登録中にエラーが発生しました", ex);
@@ -58,6 +67,7 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースのデータを更新
             catalogMapper.update(catalogList);
+
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースのデータの更新中にエラーが発生しました", ex);
@@ -72,6 +82,7 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを削除
             catalogMapper.delete(id);
+
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの削除中にエラーが発生しました", ex);
@@ -86,7 +97,10 @@ public class CatalogServiceImpl implements NameService {
         try {
             // データベースからデータを取得
             List<Catalog_List> result = catalogMapper.search(productName);
+
+            //取得したデータを返す
             return result;
+            
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
             logger.error("データベースからデータの取得中にエラーが発生しました", ex);

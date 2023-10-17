@@ -2,7 +2,7 @@
 
 ## 課題内容
 ### 最終版
-> [最終版]<br>
+> [最終版](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>
 
 ### 第7回
 #### HTTPメソッドのGET/POST/PATCH/DELETEのリクエストを扱うControllerの実装
@@ -17,7 +17,7 @@
 #### MyBatisでRead等の実装
 > [HTTPからGETでMySQLのデータが取得できる環境を構築](https://github.com/kainuma-sn/kadai7/pull/4#issuecomment-1763379540)<br>
 #### 例外をハンドリングする処理を実装
-> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装]<br>
+> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>
 
 <br><br>
 
@@ -44,4 +44,4 @@
 ### ~~null又は空白を検出するバリデーションを実装<br>~~
 > ~~[データベースのnull、名前のnullや空白を検出するバリデーションを実装]~~(https://github.com/kainuma-sn/kadai7-9/pull/17#issuecomment-1765359503)<br>
 ### null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装<br>
-> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装]<br>
+> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>

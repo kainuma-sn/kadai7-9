@@ -2,7 +2,7 @@
 
 ## 課題内容
 ### 最終版
-> [最終版](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>
+> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>
 
 ### 第7回
 #### HTTPメソッドのGET/POST/PATCH/DELETEのリクエストを扱うControllerの実装

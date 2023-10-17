@@ -29,7 +29,9 @@
 > ~~[HTTPからGETでMySQLの指定したレコードを取得できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/13#issuecomment-1763450212)~~<br>
 ### GET ※検索した文字を含む商品を取得<br>
 > [HTTPからGETでMySQLのデータを検索できる環境を構築](https://github.com/kainuma-sn/kadai7-9/pull/15#issuecomment-1765314542)<br>
-### 各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装<br>
-> [各コードにコメントアウトを追加。また、Loggerによるエラーハンドリングを実装](https://github.com/kainuma-sn/kadai7-9/pull/14#issue-1946083340)<br>
-### null又は空白を検出するバリデーションを実装<br>
-> [データベースのnull、名前のnullや空白を検出するバリデーションを実装](https://github.com/kainuma-sn/kadai7-9/pull/17#issuecomment-1765359503)<br>
+### 各コードにコメントアウトを追加。~~また、Loggerによるエラーハンドリングを実装~~<br>
+> [各コードにコメントアウトを追加。~~また、Loggerによるエラーハンドリングを実装~~](https://github.com/kainuma-sn/kadai7-9/pull/14#issue-1946083340)<br>
+### ~~null又は空白を検出するバリデーションを実装<br>~~
+> ~~[データベースのnull、名前のnullや空白を検出するバリデーションを実装]~~(https://github.com/kainuma-sn/kadai7-9/pull/17#issuecomment-1765359503)<br>
+### null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装<br>
+> [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装]<br>

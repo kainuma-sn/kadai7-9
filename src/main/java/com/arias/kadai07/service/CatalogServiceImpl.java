@@ -14,7 +14,7 @@ import java.util.List;
 
 //CatalogServiceImpl implements NameServiceを１つのbeanとしてDIコンテナに格納する。格納したクラスはbeanと呼ばれる。
 @Service
-public class CatalogServiceImpl implements NameService {
+public class CatalogServiceImpl implements CatalogService {
 
     //依存性注入
     private final CatalogMapper catalogMapper;
@@ -34,7 +34,7 @@ public class CatalogServiceImpl implements NameService {
             if (!result.isEmpty()) {
                 return result;
             } else {
-                throw new CatalogNotFoundException("user not found"); //データが見つからないエラーをスローする
+                throw new CatalogNotFoundException("catalog not found"); //データが見つからないエラーをスローする
             }
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする
@@ -91,7 +91,7 @@ public class CatalogServiceImpl implements NameService {
             if (!result.isEmpty()) {
                 return result;
             } else {
-                throw new CatalogNotFoundException("user not found"); //データが見つからないエラーをスローする
+                throw new CatalogNotFoundException("catalog not found"); //データが見つからないエラーをスローする
             }
         } catch (DataAccessException ex) {
             // データベースアクセスに関連する例外をキャッチする

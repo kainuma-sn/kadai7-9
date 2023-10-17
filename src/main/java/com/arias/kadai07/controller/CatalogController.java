@@ -26,7 +26,8 @@ public class CatalogController {
         this.catalogServiceImpl = catalogServiceImpl;
     }
 
-    //データベースから全てのデータを取得する
+    //カタログリストから全てのデータを取得する
+    @GetMapping("/findAll")
     public List<Catalog_List> findAll() {
         return catalogServiceImpl.findAll();
     }

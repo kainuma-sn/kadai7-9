@@ -1,16 +1,21 @@
 # 第7＆9回課題
 ```mermaid
 sequenceDiagram
-    participant mysql as MySQL
-    participant mapper as Mapper
-    participant service as Service
-    participant controller as Controller
     participant postman as Postman
+    participant controller as Controller
+    participant service as Service
+    participant mapper as Mapper
+    participant mysql as MySQL
 
     postman ->> controller: リクエスト
     controller ->> service: beanを取得
     service ->> mapper: インプリメントで取得
     mapper ->> mysql: Mybatisでmysqlにアクセス
+    mysql ->> mapper: 検索結果を返す
+    mapper ->> service: serviceに呼び出される
+    service ->> controller: beanとしてcontrollerに呼び出される
+    controller ->> postman: 結果を出力する
+
 ```
 ## 課題内容
 ### 最終版

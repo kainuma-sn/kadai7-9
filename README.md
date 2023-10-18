@@ -1,8 +1,16 @@
 # 第7＆9回課題
-```
-flowchart LR
-    id3(View) -- User actions --> id2 -- Update UI --> id3(View)
-    id1(Model) -- Model Changed --> id2(Presenter) -- Update model --> id1
+```mermaid
+sequenceDiagram
+    participant mysql as MySQL
+    participant mapper as Mapper
+    participant service as Service
+    participant controller as Controller
+    participant postman as Postman
+
+    postman ->> controller: リクエスト
+    controller ->> service: beanを取得
+    service ->> mapper: インプリメントで取得
+    mapper ->> mysql: Mybatisでmysqlにアクセス
 ```
 ## 課題内容
 ### 最終版

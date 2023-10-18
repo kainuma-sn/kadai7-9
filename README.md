@@ -7,13 +7,13 @@ sequenceDiagram
     participant mapper as Mapper
     participant mysql as MySQL
 
-    postman ->> controller: リクエスト
+    postman ->> controller: リクエスト(GET,POST,PATCH,DELETE)
     controller ->> service: beanを取得
     service ->> mapper: インプリメントで取得
     mapper ->> mysql: Mybatisでmysqlにアクセス
-    mysql ->> mapper: 検索結果を返す
+    mysql ->> mapper: 検索結果を返す(GET)
     mapper ->> service: serviceに呼び出される
-    service ->> controller: beanとしてcontrollerに呼び出される
+    service ->> controller: beanとしてcontrollerに呼び出される(サーバーエラー、検索結果が空又はnull、検索結果がない場合、エラーを検出)
     controller ->> postman: 結果を出力する
 
 ```

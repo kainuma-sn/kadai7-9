@@ -13,7 +13,7 @@ sequenceDiagram
     mapper ->> mysql: Mybatisでmysqlにアクセス
     mysql ->> mapper: 検索結果を返す(GET)
     mapper ->> service: serviceに呼び出される
-    service ->> controller: beanとしてcontrollerに呼び出される(サーバーエラー、検索結果が空又はnull、検索結果がない場合、エラーを検出)
+    service ->> controller: beanとしてcontrollerに呼び出される<br/>(サーバーエラー、検索結果が空又はnull、<br/>検索結果がない場合、エラーを検出)
     controller ->> postman: 結果を出力する
 
 ```

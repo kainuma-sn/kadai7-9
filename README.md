@@ -1,5 +1,9 @@
 # 第7＆9回課題
-
+```
+flowchart LR
+    id3(View) -- User actions --> id2 -- Update UI --> id3(View)
+    id1(Model) -- Model Changed --> id2(Presenter) -- Update model --> id1
+```
 ## 課題内容
 ### 最終版
 > [null又は空白、データベースから検索結果なし等を検出し、エラーを返す処理を実装](https://github.com/kainuma-sn/kadai7-9/pull/20#issuecomment-1766459598)<br>

@@ -59,17 +59,17 @@ public class CatalogController {
         return catalogServiceImpl.search(productName);
     }
 
-    // 空白又はnullの場合にエラーメッセージを返す
-    @ExceptionHandler(value = nullOrEmptyException.class)
-    public ResponseEntity<Map<String, String>> handleNullOrEmptyDataAccessException(nullOrEmptyException ex, HttpServletRequest request) {
+    //データベース処理中に問題が検出された場合、エラーメッセージを返す
+    @ExceptionHandler(value = CatalogDataAccessException.class)
+    public ResponseEntity<Map<String, String>> handleCatalogDataAccessException(CatalogDataAccessException ex, HttpServletRequest request) {
         // エラーメッセージを作成
         Map<String, String> errorMap = Map.of(
                 "timestamp", ZonedDateTime.now().toString(),
-                "status", String.valueOf(HttpStatus.BAD_REQUEST.value()), // 400
-                "error", HttpStatus.BAD_REQUEST.getReasonPhrase(),
+                "status", String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()), // 404
+                "error", HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),
                 "message", ex.getMessage(),
                 "path", request.getRequestURI());
-        return new ResponseEntity<>(errorMap, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(errorMap, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     //検索結果が該当しない場合にエラーメッセージを返す
@@ -85,17 +85,17 @@ public class CatalogController {
         return new ResponseEntity<>(errorMap, HttpStatus.NOT_FOUND);
     }
 
-    //データベース処理中に問題が検出された場合、エラーメッセージを返す
-    @ExceptionHandler(value = CatalogDataAccessException.class)
-    public ResponseEntity<Map<String, String>> handleCatalogDataAccessException(CatalogDataAccessException ex, HttpServletRequest request) {
+    // 空白又はnullの場合にエラーメッセージを返す
+    @ExceptionHandler(value = nullOrEmptyException.class)
+    public ResponseEntity<Map<String, String>> handleNullOrEmptyDataAccessException(nullOrEmptyException ex, HttpServletRequest request) {
         // エラーメッセージを作成
         Map<String, String> errorMap = Map.of(
                 "timestamp", ZonedDateTime.now().toString(),
-                "status", String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()), // 404
-                "error", HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),
+                "status", String.valueOf(HttpStatus.BAD_REQUEST.value()), // 400
+                "error", HttpStatus.BAD_REQUEST.getReasonPhrase(),
                 "message", ex.getMessage(),
                 "path", request.getRequestURI());
-        return new ResponseEntity<>(errorMap, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(errorMap, HttpStatus.BAD_REQUEST);
     }
 }
 

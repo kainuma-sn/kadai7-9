@@ -10,5 +10,4 @@ public class Kadai07Application {
     public static void main(String[] args) {
         SpringApplication.run(Kadai07Application.class, args);
     }
-
 }

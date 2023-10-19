@@ -4,7 +4,7 @@ import com.arias.kadai07.entity.Catalog_List;
 
 import java.util.List;
 
-public interface NameService {
+public interface CatalogService {
     //データベースから全てのデータを取得する
     public List<Catalog_List> findAll();
 
